@@ -70,10 +70,10 @@ regd_users.put("/auth/review/:isbn", (req, res) => {
     }
 });
 
-regd_users.delete("/auth/review/:isbn", (rew,res) => {
+regd_users.delete("/auth/review/:isbn", (req,res) => {
     const isbn = req.params.isbn;
     if(isbn) {
-        delete books[review]
+        delete books[reviews]
     }
     res.send(`Book with isbn ${isbn} review is deleted`)
 })
